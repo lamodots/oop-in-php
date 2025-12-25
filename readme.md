@@ -7,3 +7,9 @@ A class in a template to create objects
 
 ## Objects 
 Object is just an instance of a class.
+
+## Advantage of OOP over Procedural
+-   OOp is easy to understand
+-   It helps us to kep our code DRY
+-   It helps in reusing the code
+-   It provides a clear structure
