@@ -28,3 +28,35 @@ class Dog extends Animal {
 
 $dog = new Dog("Buddy");
 echo $dog->name . "\n"; // Output: Buddy
+
+
+// Overiding parent properties and methods
+echo $dog->speak() . "\n"; // Output: The dog barks.
+
+
+// final modifier can be used to prevent inheritance
+/** Final classes cannot be extended by other classes. This is useful when you want to ensure that the implementation of a class remains unchanged and cannot be modified through inheritance. 
+final class  Animal2 {
+    public function speak() {
+        return "The cat meows.";
+    }
+}
+final class Cat extends Animal2 {
+    public function speak() {
+        return "The cat meows.";
+    }
+}
+*/
+
+// const keyword can be used to define constant properties in classes
+class Circle {  
+    const PI = 3.14;  
+   
+    public function getArea($radius) {  
+        return self::PI * $radius * $radius;
+        // :: is called scope resolution operator   
+    }  
+}
+
+$circle = new Circle();
+echo "Area of circle: " . $circle->getArea(5) ;
